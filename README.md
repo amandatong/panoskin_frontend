@@ -1,1 +1,1 @@
-# by Amanda Tong
+by Amanda Tong
