@@ -1,0 +1,28 @@
+.App {
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4fbff;
+}
+
+.container {
+  text-align: left;
+}
+
+.title {
+  font-weight:600;
+  font-size:1.3em;
+  margin-bottom:0.5em;
+}
+
+select{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-color: #d5dce1;
+  font-size:1em;
+  padding:0.5em;
+  padding-right: 1em;
+  margin-bottom:0.5em;
+}
