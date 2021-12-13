@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import './styles/App.css';
 import { ReactComponent as Map } from './assets/map.svg';
 
-const r = [0, 250, 500, 1000];
+const thresholds = [0, 250, 500, 1000];
 const fill_color = "#0D7EF9";
 
 function App() {
@@ -52,11 +52,11 @@ function App() {
 
     for(const [key, value] of Object.entries(aggregated_data)){
       let index = 0;
-      if (value >= 0 && value <= 250){
+      if (value >= thresholds[0] && value <= thresholds[1]){
         index = 0;
-      } else if (value >= 250 && value <= 500){
+      } else if (value >= thresholds[1] && value <= thresholds[2]){
         index = 1;
-      } else if (value >= 500 && value <= 1000){
+      } else if (value >= thresholds[2] && value <= thresholds[3]){
         index = 2;
       } else {
         index = 3;
@@ -95,8 +95,8 @@ function App() {
         <div className="select">
           <div className="title">User Visits</div>
           <select value={selected} onChange={handleSelect}>
-            {r.map((v, index) => {
-              let text = index+1 === r.length ? `${v}+` : `${v} - ${r[index+1]}`;
+            {thresholds.map((v, index) => {
+              let text = index+1 === thresholds.length ? `${v}+` : `${v} - ${thresholds[index+1]}`;
               return(
                 <option key={index} value={index}>{text}</option>
               )
