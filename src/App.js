@@ -88,6 +88,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="header">
+        TourBuilder
+      </div>
       <div className="container">
         <div className="select">
           <div className="title">User Visits</div>
@@ -101,7 +104,9 @@ function App() {
           </select>
         </div>
 
-        <Map />
+        <div className="map-container">
+          <Map />
+        </div>
       </div>
     </div>
   );
